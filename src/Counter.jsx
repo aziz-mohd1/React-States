@@ -1,11 +1,15 @@
+import { useState } from "react";
+
 export default function Counter(){
-    let count = 0;
+    let [count, setCount] = useState(0);
     function inc(){
-        count++;
+        setCount(count+1);
+        console.log(count);      
     }
     return(
         <>
-            <button onClick={inc}>Count = {count}</button>
+            <p >Count = {count}</p>
+            <button onClick={inc}>Increase Count</button>
         </>
     );
 };
